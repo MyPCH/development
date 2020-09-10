@@ -2,6 +2,8 @@ enabled: true                           # whether to enable the Gloo API Gateway
 discovery: {}
   #namespace:                           # namespace where the Gloo discovery service runs
 global:
+  extauth:
+    enabled: false
   gateway:
     proxy: 
       name: "gateway-proxy"               # name of the Gloo gateway proxy that will host the virtual service
@@ -15,8 +17,6 @@ virtualServices:
     redirect: false                     # whether to redirect HTTP requests to HTTPS
     labels: {}
     options: {}
-    extauth:
-      enabled: false
     jwt:
       enabled: false
   https:
@@ -34,8 +34,6 @@ virtualServices:
     name: http-internal
     labels: {}
     options: {}
-    extauth:
-      enabled: false
     jwt:
       enabled: false
 nodeSelector: {}

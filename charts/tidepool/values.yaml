@@ -13,6 +13,8 @@ global:
       namespace: gloo-system
   glooingress:
     enabled: true
+    exteauth:
+      enabled: false
     jwt:
       enabled: false
   linkerdsupport:
