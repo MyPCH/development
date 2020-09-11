@@ -2,13 +2,13 @@ enabled: true                           # whether to enable the Gloo API Gateway
 discovery: {}
   #namespace:                           # namespace where the Gloo discovery service runs
 global:
-  extauth:
-    enabled: false
   gateway:
     proxy: 
       name: "gateway-proxy"               # name of the Gloo gateway proxy that will host the virtual service
       #namespace:                         # namespace of the Gloo gateway proxy that will host the virtual service
       port: 80
+extauth:
+  enabled: false
 virtualServices:
   http:
     name: http
